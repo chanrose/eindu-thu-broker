@@ -1,5 +1,7 @@
 {
   "name": "eindu-thu-broker",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }
