@@ -1,20 +1,16 @@
 import React from "react";
 import {
-  IonAvatar,
   IonButton,
   IonCard,
   IonCardContent,
   IonContent,
-  IonHeader,
   IonItem,
   IonLabel,
   IonPage,
-  IonText,
-  IonTitle,
   IonToggle,
-  IonToolbar,
 } from "@ionic/react";
 import "../../theme/components.css";
+import HeaderComponent from "../../components/header";
 
 const toggleDarkModeHandler = () => {
   document.body.classList.toggle("dark");
@@ -23,14 +19,7 @@ const toggleDarkModeHandler = () => {
 const GSettingsPage: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonText className="ion-margin-start ">Hi, Mr. Khlain</IonText>
-          <IonAvatar slot="end">
-            <img src="/assets/svg/placeholder.svg" />
-          </IonAvatar>
-        </IonToolbar>
-      </IonHeader>
+      <HeaderComponent />
       <IonContent fullscreen>
         <IonCard>
           <IonCardContent>

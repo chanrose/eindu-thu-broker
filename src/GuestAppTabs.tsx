@@ -14,13 +14,15 @@ import GHomePage from "./pages/guest/homePage";
 import GPostListPage from "./pages/guest/postListPage";
 import GMessagePage from "./pages/guest/messagePage";
 import GSettingsPage from "./pages/guest/settingsPage";
+import GPostEntryPage from "./pages/guest/postEntryPage";
 
 const GuestAppTabs: React.FC = () => (
   <IonReactRouter>
     <IonTabs>
       <IonRouterOutlet>
         <Route path="/home" component={GHomePage} exact={true} />
-        <Route path="/post-lists" component={GPostListPage} exact={true} />
+        <Route path="/posts" component={GPostListPage} exact={true} />
+        <Route path="/post/:id" component={GPostEntryPage} exact={true} />
         <Route path="/messages" component={GMessagePage} exact={true} />
         <Route path="/settings" component={GSettingsPage} />
         <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
@@ -30,7 +32,7 @@ const GuestAppTabs: React.FC = () => (
           <IonIcon icon={home} />
           <IonLabel>Home</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="post-lists" href="/post-lists">
+        <IonTabButton tab="posts" href="/posts">
           <IonIcon icon={list} />
           <IonLabel>Post List</IonLabel>
         </IonTabButton>

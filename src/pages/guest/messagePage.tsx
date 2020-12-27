@@ -5,39 +5,27 @@ import {
   IonCard,
   IonCardContent,
   IonCardHeader,
+  IonCardSubtitle,
   IonChip,
-  IonCol,
   IonContent,
-  IonHeader,
   IonIcon,
   IonPage,
-  IonRow,
-  IonText,
-  IonTitle,
-  IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../../components/ExploreContainer";
 import "../../theme/components.css";
 import { pencil, trash } from "ionicons/icons";
+import HeaderComponent from "../../components/header";
 
 const GMessagePage: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonText className="ion-margin-start ">Hi, Mr. Khlain</IonText>
-          <IonAvatar slot="end">
-            <img src="/assets/svg/placeholder.svg" />
-          </IonAvatar>
-        </IonToolbar>
-      </IonHeader>
+      <HeaderComponent />
       <IonContent fullscreen>
         <IonCard>
           <IonCardHeader>
-            <img src="/assets/svg/placeholder.svg" />
+            <IonCardSubtitle>You're post have been approve</IonCardSubtitle>{" "}
           </IonCardHeader>
           <IonCardContent>
-            Post Request Status
+            Selling Home Estate 001
             <div className="ion-text-end">
               <IonButton fill="clear">
                 <IonIcon icon={pencil}></IonIcon>
@@ -48,24 +36,38 @@ const GMessagePage: React.FC = () => {
             </div>
           </IonCardContent>
         </IonCard>
-        <IonChip>
-          <IonAvatar>
-            <img src="/assets/svg/placeholder.svg" />
-          </IonAvatar>
-          <p>Chat Testing Placeholder </p>
-        </IonChip>
-        <IonRow>
-          <IonCol>
-            <div className="ion text-end">
-              <IonChip>
-                <IonAvatar>
-                  <img src="/assets/svg/placeholder.svg" />
-                </IonAvatar>
-                <p>Chat Testing Placeholder </p>
-              </IonChip>
+        <IonCard color="danger">
+          <IonCardHeader>
+            <IonCardSubtitle>You're post have been declined</IonCardSubtitle>{" "}
+          </IonCardHeader>
+          <IonCardContent>
+            Selling Home Estate 001
+            <div className="ion-text-end">
+              <IonButton fill="clear">
+                <IonIcon icon={pencil}></IonIcon>
+              </IonButton>
+              <IonButton color="danger" fill="clear">
+                <IonIcon icon={trash}></IonIcon>
+              </IonButton>
             </div>
-          </IonCol>
-        </IonRow>
+          </IonCardContent>
+        </IonCard>
+        <IonCard>
+          <IonCardHeader>
+            <IonCardSubtitle>You're post have been approve</IonCardSubtitle>{" "}
+          </IonCardHeader>
+          <IonCardContent>
+            Selling Home Estate 001
+            <div className="ion-text-end">
+              <IonButton fill="clear">
+                <IonIcon icon={pencil}></IonIcon>
+              </IonButton>
+              <IonButton color="danger" fill="clear">
+                <IonIcon icon={trash}></IonIcon>
+              </IonButton>
+            </div>
+          </IonCardContent>
+        </IonCard>
       </IonContent>
     </IonPage>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  IonAvatar,
   IonButton,
   IonCard,
   IonCardContent,
@@ -9,28 +8,19 @@ import {
   IonCardTitle,
   IonChip,
   IonContent,
-  IonHeader,
   IonItem,
   IonLabel,
   IonPage,
   IonSelect,
   IonSelectOption,
   IonText,
-  IonTitle,
-  IonToolbar,
 } from "@ionic/react";
 import "../../theme/components.css";
+import HeaderComponent from "../../components/header";
 const GHomePage: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonText className="ion-margin-start ">Hi, Mr. Khlain</IonText>
-          <IonAvatar slot="end">
-            <img src="/assets/svg/placeholder.svg" />
-          </IonAvatar>
-        </IonToolbar>
-      </IonHeader>
+      <HeaderComponent />
       <IonContent fullscreen>
         <IonCard color="primary">
           <IonCardHeader>
