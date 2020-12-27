@@ -7,18 +7,38 @@ import {
   IonCardSubtitle,
   IonCardTitle,
   IonContent,
+  IonFab,
+  IonFabButton,
+  IonFabList,
+  IonIcon,
   IonPage,
   IonTextarea,
 } from "@ionic/react";
 import "../../theme/components.css";
 import HeaderComponent from "../../components/header";
 import PostCardComponent from "../../components/postCard";
+import { add, arrowUpCircle, filter } from "ionicons/icons";
 
 const GPostListPage: React.FC = () => {
   return (
     <IonPage>
       <HeaderComponent />
       <IonContent fullscreen>
+        <IonFab vertical="bottom" horizontal="end" slot="fixed">
+          <IonFabButton color="light">
+            <IonIcon icon={arrowUpCircle} />
+          </IonFabButton>
+          <IonFabList side="top">
+            <IonFabButton>
+              <IonIcon icon={filter} />
+            </IonFabButton>
+          </IonFabList>
+          <IonFabList side="start">
+            <IonFabButton>
+              <IonIcon icon={add} />
+            </IonFabButton>
+          </IonFabList>
+        </IonFab>
         {/* <IonButton className="ion-margin-start ion-margin-end" expand="block">
           Add Post
         </IonButton> */}

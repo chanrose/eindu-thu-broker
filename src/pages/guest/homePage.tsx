@@ -22,7 +22,7 @@ const GHomePage: React.FC = () => {
     <IonPage>
       <HeaderComponent />
       <IonContent fullscreen>
-        <IonCard color="primary">
+        <IonCard color="dark">
           <IonCardHeader>
             <div className="ion-text-center">
               <IonCardSubtitle>Quick Find</IonCardSubtitle>
@@ -39,11 +39,13 @@ const GHomePage: React.FC = () => {
               </IonSelect>
             </IonItem>
             <div className="ion-text-end">
-              <IonButton fill="clear">Find</IonButton>
+              <IonButton routerLink="/posts" fill="clear">
+                Find
+              </IonButton>
             </div>
           </IonCardContent>
         </IonCard>
-        <IonCard color="primary">
+        <IonCard color="dark">
           <div className="ion-text-center">
             <IonCardTitle>
               {" "}

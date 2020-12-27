@@ -1,12 +1,10 @@
 import React from "react";
 import {
-  IonAvatar,
   IonButton,
   IonCard,
   IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
-  IonChip,
   IonContent,
   IonIcon,
   IonPage,
@@ -43,10 +41,10 @@ const GMessagePage: React.FC = () => {
           <IonCardContent>
             Selling Home Estate 001
             <div className="ion-text-end">
-              <IonButton fill="clear">
+              <IonButton color="light" fill="clear">
                 <IonIcon icon={pencil}></IonIcon>
               </IonButton>
-              <IonButton color="danger" fill="clear">
+              <IonButton color="light" fill="clear">
                 <IonIcon icon={trash}></IonIcon>
               </IonButton>
             </div>

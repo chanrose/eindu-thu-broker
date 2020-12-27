@@ -1,17 +1,6 @@
 import React from "react";
-import {
-  IonAvatar,
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonChip,
-  IonContent,
-  IonIcon,
-  IonPage,
-} from "@ionic/react";
+import { IonAvatar, IonChip, IonContent, IonPage } from "@ionic/react";
 import "../../theme/components.css";
-import { pencil, trash } from "ionicons/icons";
 import HeaderComponent from "../../components/header";
 import PostCardComponent from "../../components/postCard";
 
