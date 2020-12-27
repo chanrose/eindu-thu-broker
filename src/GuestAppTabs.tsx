@@ -9,20 +9,32 @@ import {
   IonTabs,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { chatbubble, home, list, settings } from "ionicons/icons";
+import {
+  chatbubble,
+  home,
+  list,
+  notifications,
+  settings,
+} from "ionicons/icons";
 import GHomePage from "./pages/guest/homePage";
 import GPostListPage from "./pages/guest/postListPage";
 import GMessagePage from "./pages/guest/messagePage";
 import GSettingsPage from "./pages/guest/settingsPage";
 import GPostEntryPage from "./pages/guest/postEntryPage";
+import GNotificationPage from "./pages/guest/notificationPage";
 
 const GuestAppTabs: React.FC = () => (
   <IonReactRouter>
     <IonTabs>
       <IonRouterOutlet>
-        <Route path="/home" component={GHomePage} exact={true} />
+        <Route path="/home" component={GPostListPage} exact={true} />
         <Route path="/posts" component={GPostListPage} exact={true} />
         <Route path="/post/:id" component={GPostEntryPage} exact={true} />
+        <Route
+          path="/notification"
+          component={GNotificationPage}
+          exact={true}
+        />
         <Route path="/messages" component={GMessagePage} exact={true} />
         <Route path="/settings" component={GSettingsPage} />
         <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
@@ -32,13 +44,17 @@ const GuestAppTabs: React.FC = () => (
           <IonIcon icon={home} />
           <IonLabel>Home</IonLabel>
         </IonTabButton>
-        <IonTabButton tab="posts" href="/posts">
+        {/* <IonTabButton tab="posts" href="/posts">
           <IonIcon icon={list} />
           <IonLabel>Post List</IonLabel>
-        </IonTabButton>
+        </IonTabButton> */}
         <IonTabButton tab="messages" href="/messages">
           <IonIcon icon={chatbubble} />
           <IonLabel>Message</IonLabel>
+        </IonTabButton>
+        <IonTabButton tab="notification" href="/notification">
+          <IonIcon icon={notifications} />
+          <IonLabel>Notification</IonLabel>
         </IonTabButton>
         <IonTabButton tab="settings" href="/settings">
           <IonIcon icon={settings} />

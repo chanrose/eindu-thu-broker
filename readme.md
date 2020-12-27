@@ -1,10 +1,14 @@
-## Latest Updated on Dec 24, 2020
+## Latest Updated on Dec 28, 2020
 
 - Initializing projects
 - Added a logo
 - Added tabs for guest
 - Update UI components on Home, Post List, Message, and Setting
 - Enable Dark Mode
+- Replace home with post list
+- Replace message as notification
+- Creating messages list
+
 
 
 ## Eindu Thu Real Broker

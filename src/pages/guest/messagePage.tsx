@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  IonAvatar,
+  IonBadge,
   IonButton,
   IonCard,
   IonCardContent,
@@ -7,6 +9,8 @@ import {
   IonCardSubtitle,
   IonContent,
   IonIcon,
+  IonItem,
+  IonLabel,
   IonPage,
 } from "@ionic/react";
 import "../../theme/components.css";
@@ -17,52 +21,52 @@ const GMessagePage: React.FC = () => {
   return (
     <IonPage>
       <HeaderComponent />
-      <IonContent fullscreen>
-        <IonCard>
+      <IonContent className="ion-padding" fullscreen>
+        {/* <IonCard>
           <IonCardHeader>
-            <IonCardSubtitle>You're post have been approve</IonCardSubtitle>{" "}
+            <IonCardSubtitle>Estate No 001</IonCardSubtitle>{" "}
           </IonCardHeader>
           <IonCardContent>
-            Selling Home Estate 001
-            <div className="ion-text-end">
-              <IonButton fill="clear">
-                <IonIcon icon={glasses}></IonIcon>
-              </IonButton>
-            </div>
+            <IonItem lines="none">
+              <IonLabel>Selling Home Estate 001</IonLabel>
+              <IonAvatar slot="start">
+                <img src="assets/svg/khlain.jpg" alt="avatar" />
+              </IonAvatar>
+            </IonItem>
           </IonCardContent>
-        </IonCard>
-        <IonCard color="danger">
-          <IonCardHeader>
-            <IonCardSubtitle>You're post have been declined</IonCardSubtitle>{" "}
-          </IonCardHeader>
-          <IonCardContent>
-            Selling Home Estate 001
-            <div className="ion-text-end">
-              <IonButton color="light" fill="clear">
-                <IonIcon icon={pencil}></IonIcon>
-              </IonButton>
-              <IonButton color="light" fill="clear">
-                <IonIcon icon={trash}></IonIcon>
-              </IonButton>
-            </div>
-          </IonCardContent>
-        </IonCard>
-        <IonCard>
-          <IonCardHeader>
-            <IonCardSubtitle>You're post have been approve</IonCardSubtitle>{" "}
-          </IonCardHeader>
-          <IonCardContent>
-            Selling Home Estate 001
-            <div className="ion-text-end">
-              <IonButton fill="clear">
-                <IonIcon icon={pencil}></IonIcon>
-              </IonButton>
-              <IonButton color="danger" fill="clear">
-                <IonIcon icon={trash}></IonIcon>
-              </IonButton>
-            </div>
-          </IonCardContent>
-        </IonCard>
+        </IonCard> */}
+
+        <IonItem lines="none">
+          <IonLabel>
+            Estate 001 <br />
+            Selling home apartment
+          </IonLabel>
+          <IonBadge slot="end">11</IonBadge>
+          <IonAvatar slot="start">
+            <img src="assets/svg/khlain.jpg" alt="avatar" />
+          </IonAvatar>
+        </IonItem>
+        <IonItem lines="none" className="ion-margin-top">
+          <IonLabel>Renting Template Estate 002</IonLabel>
+          <IonBadge slot="end">71</IonBadge>
+          <IonAvatar slot="start">
+            <img src="assets/svg/houseTemplate01.jpg" alt="avatar" />
+          </IonAvatar>
+        </IonItem>
+        <IonItem lines="none" className="ion-margin-top">
+          <IonLabel>Buying Home Estate 002</IonLabel>
+          <IonBadge slot="end">1</IonBadge>
+          <IonAvatar slot="start">
+            <img src="assets/svg/interiorTemplate01.jpg" alt="avatar" />
+          </IonAvatar>
+        </IonItem>
+        <IonItem lines="none" className="ion-margin-top">
+          <IonLabel>Designing Template Estate 022</IonLabel>
+          <IonBadge slot="end">5</IonBadge>
+          <IonAvatar slot="start">
+            <img src="assets/svg/interiorTemplate02.jpg" alt="avatar" />
+          </IonAvatar>
+        </IonItem>
       </IonContent>
     </IonPage>
   );
