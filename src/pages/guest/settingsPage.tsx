@@ -28,6 +28,7 @@ const GSettingsPage: React.FC = () => {
             </div>
             <IonItem>FAQ</IonItem>
             <IonItem>Credits</IonItem>
+            <IonItem>Feedback</IonItem>
             <IonItem>
               <IonLabel> Switch Theme</IonLabel>
               <IonToggle

@@ -10,7 +10,7 @@ import {
   IonPage,
 } from "@ionic/react";
 import "../../theme/components.css";
-import { pencil, trash } from "ionicons/icons";
+import { glasses, pencil, trash } from "ionicons/icons";
 import HeaderComponent from "../../components/header";
 
 const GMessagePage: React.FC = () => {
@@ -26,10 +26,7 @@ const GMessagePage: React.FC = () => {
             Selling Home Estate 001
             <div className="ion-text-end">
               <IonButton fill="clear">
-                <IonIcon icon={pencil}></IonIcon>
-              </IonButton>
-              <IonButton color="danger" fill="clear">
-                <IonIcon icon={trash}></IonIcon>
+                <IonIcon icon={glasses}></IonIcon>
               </IonButton>
             </div>
           </IonCardContent>

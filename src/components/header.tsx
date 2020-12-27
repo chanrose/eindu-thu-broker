@@ -1,10 +1,23 @@
-import { IonAvatar, IonHeader, IonText, IonToolbar } from "@ionic/react";
+import {
+  IonAvatar,
+  IonBackButton,
+  IonButtons,
+  IonHeader,
+  IonText,
+  IonToolbar,
+} from "@ionic/react";
 import React from "react";
 import "../theme/components.css";
-const HeaderComponent = () => {
+
+interface props {
+  hasBackBtn?: boolean;
+}
+
+const HeaderComponent: React.FC<props> = ({ hasBackBtn }) => {
   return (
     <IonHeader>
       <IonToolbar>
+        <IonButtons slot="start">{hasBackBtn && <IonBackButton />}</IonButtons>
         <IonText className="ion-margin-start ">Hi, Mr. Khlain</IonText>
         <IonAvatar slot="end">
           <img
