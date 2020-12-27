@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import {
   IonIcon,
   IonLabel,
@@ -27,17 +27,24 @@ const GuestAppTabs: React.FC = () => (
   <IonReactRouter>
     <IonTabs>
       <IonRouterOutlet>
-        <Route path="/home" component={GPostListPage} exact={true} />
-        <Route path="/posts" component={GPostListPage} exact={true} />
-        <Route path="/post/:id" component={GPostEntryPage} exact={true} />
-        <Route
-          path="/notification"
-          component={GNotificationPage}
-          exact={true}
-        />
-        <Route path="/messages" component={GMessagePage} exact={true} />
-        <Route path="/settings" component={GSettingsPage} />
-        <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
+        <Switch>
+          <Route path="/home" component={GPostListPage} exact={true} />
+          <Route path="/posts" component={GPostListPage} exact={true} />
+          <Route path="/post/:id" component={GPostEntryPage} exact={true} />
+          <Route
+            path="/notification"
+            component={GNotificationPage}
+            exact={true}
+          />
+          <Route path="/messages" component={GMessagePage} exact={true} />
+          <Route path="/settings" component={GSettingsPage} />
+          <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
+          <Route
+            path="/guest"
+            render={() => <Redirect to="/home" />}
+            exact={true}
+          />
+        </Switch>
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
         <IonTabButton tab="home" href="/home">
