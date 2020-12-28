@@ -9,18 +9,19 @@ import GRegisterPage from "./pages/guest/registerPage";
 
 const App: React.FC = () => (
   <IonApp>
-    <GuestAppTabs />
     <IonReactRouter>
       <Switch>
         <Route path="/login">
           <GLoginPage />
         </Route>
-
         <Route path="/register">
           <GRegisterPage />
         </Route>
-        <Route path="/guest">
+        <Route path="/my">
           <GuestAppTabs />
+        </Route>
+        <Route>
+          <GLoginPage />
         </Route>
       </Switch>
     </IonReactRouter>

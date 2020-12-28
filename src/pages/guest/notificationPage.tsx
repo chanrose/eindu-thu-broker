@@ -10,7 +10,7 @@ import {
   IonPage,
 } from "@ionic/react";
 import "../../theme/components.css";
-import { glasses, pencil, trash } from "ionicons/icons";
+import { chatbubble, glasses, pencil, trash } from "ionicons/icons";
 import HeaderComponent from "../../components/header";
 
 const GNotificationPage: React.FC = () => {
@@ -39,7 +39,7 @@ const GNotificationPage: React.FC = () => {
             Selling Home Estate 001
             <div className="ion-text-end">
               <IonButton color="light" fill="clear">
-                <IonIcon icon={pencil}></IonIcon>
+                <IonIcon icon={chatbubble}></IonIcon>
               </IonButton>
               <IonButton color="light" fill="clear">
                 <IonIcon icon={trash}></IonIcon>
@@ -49,12 +49,17 @@ const GNotificationPage: React.FC = () => {
         </IonCard>
         <IonCard>
           <IonCardHeader>
-            <IonCardSubtitle>You're post have been approve</IonCardSubtitle>{" "}
+            <IonCardSubtitle>
+              You're post is being examine right now
+            </IonCardSubtitle>{" "}
           </IonCardHeader>
           <IonCardContent>
             Selling Home Estate 001
             <div className="ion-text-end">
-              <IonButton fill="clear">
+              <IonButton color="primary" fill="clear">
+                <IonIcon icon={chatbubble}></IonIcon>
+              </IonButton>
+              <IonButton color="secondary" fill="clear">
                 <IonIcon icon={pencil}></IonIcon>
               </IonButton>
               <IonButton color="danger" fill="clear">

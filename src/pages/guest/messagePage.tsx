@@ -2,19 +2,12 @@ import React from "react";
 import {
   IonAvatar,
   IonBadge,
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
   IonContent,
-  IonIcon,
   IonItem,
   IonLabel,
   IonPage,
 } from "@ionic/react";
 import "../../theme/components.css";
-import { glasses, pencil, trash } from "ionicons/icons";
 import HeaderComponent from "../../components/header";
 
 const GMessagePage: React.FC = () => {
@@ -36,7 +29,7 @@ const GMessagePage: React.FC = () => {
           </IonCardContent>
         </IonCard> */}
 
-        <IonItem lines="none">
+        <IonItem lines="none" routerLink="/my/message/:id">
           <IonLabel>
             Estate 001 <br />
             Selling home apartment
@@ -46,21 +39,33 @@ const GMessagePage: React.FC = () => {
             <img src="assets/svg/khlain.jpg" alt="avatar" />
           </IonAvatar>
         </IonItem>
-        <IonItem lines="none" className="ion-margin-top">
+        <IonItem
+          lines="none"
+          className="ion-margin-top"
+          routerLink="/my/message/:id"
+        >
           <IonLabel>Renting Template Estate 002</IonLabel>
           <IonBadge slot="end">71</IonBadge>
           <IonAvatar slot="start">
             <img src="assets/svg/houseTemplate01.jpg" alt="avatar" />
           </IonAvatar>
         </IonItem>
-        <IonItem lines="none" className="ion-margin-top">
+        <IonItem
+          lines="none"
+          className="ion-margin-top"
+          routerLink="/my/message/:id"
+        >
           <IonLabel>Buying Home Estate 002</IonLabel>
           <IonBadge slot="end">1</IonBadge>
           <IonAvatar slot="start">
             <img src="assets/svg/interiorTemplate01.jpg" alt="avatar" />
           </IonAvatar>
         </IonItem>
-        <IonItem lines="none" className="ion-margin-top">
+        <IonItem
+          lines="none"
+          className="ion-margin-top"
+          routerLink="/my/message/:id"
+        >
           <IonLabel>Designing Template Estate 022</IonLabel>
           <IonBadge slot="end">5</IonBadge>
           <IonAvatar slot="start">

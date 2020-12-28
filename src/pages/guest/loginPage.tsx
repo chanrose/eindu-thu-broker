@@ -4,17 +4,20 @@ import {
   IonButton,
   IonCard,
   IonCardContent,
-  IonCardHeader,
+  IonCol,
   IonContent,
   IonHeader,
+  IonIcon,
   IonInput,
   IonItem,
   IonPage,
+  IonRow,
+  IonText,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import "../../theme/components.css";
-import HeaderComponent from "../../components/header";
+import { logoApple, logoFacebook, logoGoogle } from "ionicons/icons";
 const GLoginPage: React.FC = () => {
   const [userDetail, setUserDetail] = useState({ email: "", password: "" });
   const [status, setStatus] = useState({ loading: false, error: false });
@@ -57,16 +60,14 @@ const GLoginPage: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding" fullscreen>
-        <IonCard>
-          <IonCardHeader color="dark">
-            <div className="ion-text-center">
-              <img
-                src="/assets/svg/login-authentication.svg"
-                alt="login illustration"
-                height="150 px"
-              />
-            </div>
-          </IonCardHeader>
+        <IonCard color="light">
+          <div className="ion-text-center">
+            <img
+              src="/assets/logo.svg"
+              alt="login illustration"
+              height="200 px"
+            />
+          </div>
         </IonCard>
 
         <IonCard>
@@ -97,18 +98,39 @@ const GLoginPage: React.FC = () => {
                 placeholder="*******"
               />
             </IonItem>
+            <div className="ion-text-end ion-margin-top">Forgot password?</div>
           </IonCardContent>
         </IonCard>
 
         <IonButton
           color="dark"
-          routerLink="/guest"
+          routerLink="/my/home"
           onClick={handleLogin}
           className="ion-margin-start ion-margin-end"
           expand="block"
         >
           LOGIN
         </IonButton>
+        <div className="ion-text-center">
+          <IonText>Or</IonText>
+        </div>
+        <IonRow>
+          <IonCol>
+            <IonButton expand="block">
+              <IonIcon icon={logoFacebook} />
+            </IonButton>
+          </IonCol>
+          <IonCol>
+            <IonButton color="danger" expand="block">
+              <IonIcon icon={logoGoogle} />
+            </IonButton>
+          </IonCol>
+          <IonCol>
+            <IonButton color="light" expand="block">
+              <IonIcon icon={logoApple} />
+            </IonButton>
+          </IonCol>
+        </IonRow>
         <IonButton
           routerLink="/register"
           className="ion-margin-start ion-margin-end"

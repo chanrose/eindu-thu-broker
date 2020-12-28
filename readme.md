@@ -8,7 +8,8 @@
 - Replace home with post list
 - Replace message as notification
 - Creating messages list
-
+- Worked on Profile Page
+- Message Entry Page
 
 
 ## Eindu Thu Real Broker

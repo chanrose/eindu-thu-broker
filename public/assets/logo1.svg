@@ -184,6 +184,8 @@
 </g>
 </defs>
 <g id="surface1">
+<rect x="0" y="0" width="375" height="374.999991" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
+<rect x="0" y="0" width="375" height="374.999991" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(97.24884%,94.119263%,0%);fill-opacity:1;" d="M 201.75 150.09375 L 281.210938 150.09375 L 281.210938 229.550781 L 201.75 229.550781 Z M 201.75 150.09375 "/>
 <use xlink:href="#surface5" transform="matrix(1,0,0,1,98,186)" mask="url(#mask0)"/>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
